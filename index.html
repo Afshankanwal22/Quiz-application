@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="app-container">
+        <!-- Form Section -->
+        <section id="form-box" class="glass-card">
+          <h2> Start Web Quiz</h2>
+          <form id="user-form">
+            <input type="text" id="name" placeholder="Enter your name" required />
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <input type="password" id="password" placeholder="Enter password" required />
+            
+            
+            <!-- Course Dropdown -->
+            <select id="course" required>
+              <option value="" disabled selected>Select your course</option>
+              <option value="web-development">Web Development</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="ai">AI</option>
+              <option value="data-science">Data Science</option>
+            </select>
+            <button type="submit">Start Quiz</button>
+          </form>
+        </section>
+    
+        <!-- Quiz Section -->
+        <section id="quiz-box" class="glass-card hidden">
+          <h2 id="question-title">Question</h2>
+          <div id="options-container"></div>
+          <button id="next-btn" disabled>Next</button>
+        </section>
+    
+        <!-- Result Section -->
+        <section id="result-box" class="glass-card hidden">
+          <h2>🎉 Quiz Completed</h2>
+          <!-- Inside your resultBox div -->
+        <div class="circle-container">
+    <div class="progress-circle">
+      <span id="percentage-text">0%</span>
+    </div>
+  </div>
+  
+          <div class="result-summary">
+            <p><strong>Total Correct:</strong> <span id="correct-answers">0</span> out of 15</p>
+            <p><strong>Marks:</strong> <span id="total-marks">0</span> / 30</p>
+            
+          </div>
+          <button  class="restart-btn">Restart Quiz</button>
+        </section>
+      </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
