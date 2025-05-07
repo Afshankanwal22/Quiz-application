@@ -157,24 +157,6 @@ function showResult() {
     <p><strong>Percentage:</strong> ${percentage}%</p>
     <button onclick="location.reload()">Restar Quiz</button>
   `;
-
-//   // Animate Circular Progress
-//   const circle = document.querySelector('.progress-circle');
-//   const percentageText = document.getElementById('percentage-text');
-//   let current = 0;
-//   const target = parseInt(percentage);
-
-//   const progressInterval = setInterval(() => {
-//     if (current >= target) {
-//       clearInterval(progressInterval);
-//     } else {
-//       current++;
-//       let gradient = `conic-gradient(#00ffcc ${current * 3.6}deg, #444 ${current * 3.6}deg)`;
-//       circle.style.background = gradient;
-//       percentageText.textContent = `${current}%`;
-//     }
-//   }, 20);
-// 
 const circle = document.querySelector('.progress-circle');
 const percentageText = document.getElementById('percentage-text');
 let current = 0;
@@ -185,7 +167,6 @@ const progressInterval = setInterval(() => {
     clearInterval(progressInterval);
   } else {
     current++;
-    // Updated conic-gradient colors to match your UI background
     let gradient = `conic-gradient(#5a4141 ${current * 3.6}deg, #d082d1 ${current * 3.6}deg)`; 
     circle.style.background = gradient;
     percentageText.textContent = `${current}%`;
